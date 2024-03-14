@@ -1,0 +1,27 @@
+# 忽略所有 .log 后缀的日志文件
+*.log
+ 
+# 忽略 node_modules 文件夹及其内容
+/node_modules/
+/.vscode/
+ 
+# 忽略 package-lock.json 文件
+# package-lock.json
+ 
+# 忽略 npm 生成的临时文件
+npm-debug.log*
+yarn-error.log*
+ 
+# 忽略编辑器自动生成的文件
+.idea/*
+.vscode/*
+ 
+# 忽略特定语言的构建输出文件
+build/
+dist/
+out/
+target/
+ 
+# 忽略特定操作系统上的文件
+.DS_Store
+Thumbs.db
