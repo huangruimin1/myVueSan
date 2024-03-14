@@ -5,37 +5,55 @@ defineProps<{
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
+  <div >
+    <b class="greetings">
+
+      {{ msg }}
+    </b>
+    <p>123456789</p>
+    <table class="table">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
+  .greetings{
+    font-size: 120px;
+    font-weight: bold;
+    color: red;
   }
-}
+  table{
+    font-size: 18px;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+  }
+  tr{
+    border: 1px solid #eee;
+  }
+  td{
+    border: 1px solid #eee;
+  }
 </style>
