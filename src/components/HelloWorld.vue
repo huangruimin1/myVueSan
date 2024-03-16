@@ -5,6 +5,7 @@ defineProps<{
 </script>
 
 <template>
+<<<<<<< HEAD
   <div >
     <b class="greetings">
 
@@ -34,6 +35,10 @@ defineProps<{
         <td>5</td>
       </tr>
     </table>
+=======
+  <div class="greetings">
+    {{ msg }}
+>>>>>>> 55e75a45754d88581635db97f538c0038381643f
   </div>
 </template>
 
@@ -42,6 +47,7 @@ defineProps<{
     font-size: 120px;
     font-weight: bold;
     color: red;
+<<<<<<< HEAD
   }
   table{
     font-size: 18px;
@@ -55,5 +61,7 @@ defineProps<{
   }
   td{
     border: 1px solid #eee;
+=======
+>>>>>>> 55e75a45754d88581635db97f538c0038381643f
   }
 </style>

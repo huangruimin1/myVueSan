@@ -17,5 +17,9 @@
 </template>
 
 <style scoped>
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 55e75a45754d88581635db97f538c0038381643f
 </style>
