@@ -1,53 +1,23 @@
-<script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
-</script>
-
 <template>
-<<<<<<< HEAD
   <div >
     <b class="greetings">
 
-      {{ msg }}
+      {{ num }}
     </b>
-    <p>123456789</p>
-    <table class="table">
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-      </tr>
-    </table>
-=======
-  <div class="greetings">
-    {{ msg }}
->>>>>>> 55e75a45754d88581635db97f538c0038381643f
+
+    <button @click="add">点我加1</button>
   </div>
 </template>
+<script setup lang="ts">
+  import useAdd from '@/hooks/useAdd';
+  const { num, add} = useAdd();
 
+</script>
 <style scoped>
   .greetings{
     font-size: 120px;
     font-weight: bold;
     color: red;
-<<<<<<< HEAD
   }
   table{
     font-size: 18px;
@@ -61,7 +31,5 @@ defineProps<{
   }
   td{
     border: 1px solid #eee;
-=======
->>>>>>> 55e75a45754d88581635db97f538c0038381643f
   }
 </style>
