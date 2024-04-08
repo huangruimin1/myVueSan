@@ -5,12 +5,20 @@
       {{ num }}
     </b>
 
-    <button @click="add">点我加1</button>
+    <button @click="add">hooks:点我加1</button>
+    pinia里面的count:{{ addStroe1.count }}
+    <button @click="addd">pinia:点我加1</button>
   </div>
 </template>
 <script setup lang="ts">
   import useAdd from '@/hooks/useAdd';
   const { num, add} = useAdd();
+
+  import { useAddStore } from '@/store/addStroe';
+  const addStroe1 = useAddStore();
+  const addd = () => {
+    addStroe1.count++;
+  }
 
 </script>
 <style scoped>
