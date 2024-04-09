@@ -8,10 +8,20 @@
     <button @click="add">hooks:点我加1</button>
     pinia里面的count:{{ addStroe1.count }}
     <button @click="addd">pinia:点我加1</button>
+    pinia getters doubleCount {{ addStroe1.doubleCunt }}
+
+    <button @click="addStroe1.changeCount(selectNum)">pinia actions:点我加改变count</button>
+    <select name="a" id="1" v-model.number="selectNum">
+      <option value="0">0</option>
+      <option value="2">2</option>
+      <option value="4">4</option>
+      <option value="6">6</option>
+    </select>
   </div>
 </template>
 <script setup lang="ts">
   import useAdd from '@/hooks/useAdd';
+  import { ref } from 'vue';
   const { num, add} = useAdd();
 
   import { useAddStore } from '@/store/addStroe';
@@ -20,6 +30,13 @@
     addStroe1.count++;
   }
 
+  let selectNum = ref(0);
+  // const changeCount = addStroe1
+  addStroe1.$subscribe((mutations,state)=>{
+    console.log(mutations)
+    console.log(state)
+
+  })
 </script>
 <style scoped>
   .greetings{

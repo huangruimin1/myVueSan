@@ -6,5 +6,15 @@ export const useAddStore = defineStore('addStore',{
         return {
             count: ref(0)
         }
+    },
+    getters:{
+        doubleCunt(state){
+            return state.count * 4
+        }
+    },
+    actions:{
+        changeCount(num:number){
+          this.count += num;
+        }
     }
 })
