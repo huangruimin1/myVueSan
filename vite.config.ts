@@ -19,7 +19,11 @@ export default defineConfig({
     preprocessorOptions: {
       less: {
         // javascriptEnabled: true,
+<<<<<<< HEAD
         additionalData: `@import "@/assets/global.less";`,
+=======
+        // additionalData: `@import "@/assets/global.less"`,
+>>>>>>> 491e43be5e3aae3bcc439ccea6fe0451e6bba70e
         javascriptEnabled: true,
       },
     },

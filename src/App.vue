@@ -1,5 +1,6 @@
 <template>
   <div>
+<<<<<<< HEAD
     <Nav @abc="demo" :navItemArr=navItemArr></Nav>
     子组件传过来的值: {{ str }}
     <el-button @click="openMsg">我是 ElButton</el-button>
@@ -46,5 +47,31 @@ const openMsg = () => {
     type: 'success',
   })
 }
+=======
+    <Nav :navItemArr=navItemArr></Nav>
+    <!-- vue3.0配置 -->
+    <router-view v-slot="{ Component }">
+      <keep-alive>
+        <component :is="Component" :key="$route.name"  v-if="$route.meta.keepAlive"/>
+      </keep-alive>
+      <component :is="Component" :key="$route.name"  v-if="!$route.meta.keepAlive"/>
+    </router-view> 
+  </div>
+</template>
+<script setup lang="ts">
+  // import HelloWorld from './components/HelloWorld.vue'
+  import Nav from './components/Nav.vue'
+  
+  const navItemArr = [{
+    to:'/',
+    txt:'首页'
+  },{
+    to:'/details',
+    txt:'详情'
+  },{
+    to:'/about',
+    txt:'关于'
+  }]
+>>>>>>> 491e43be5e3aae3bcc439ccea6fe0451e6bba70e
 </script>
 <style scoped></style>
